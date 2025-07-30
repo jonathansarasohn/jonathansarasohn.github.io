@@ -9,7 +9,6 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
       background-color: #f9f9f9;
       color: #333;
     }
@@ -17,24 +16,34 @@
     header {
       background-color: #004466;
       color: white;
-      padding: 3rem 1rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
 
     header h1 {
-      margin: 0;
+      margin: 0.5rem 0 0.2rem;
       font-size: 2.5rem;
     }
 
     header p {
+      margin: 0.2rem 0 1rem;
       font-size: 1.2rem;
-      margin-top: 0.5rem;
+    }
+
+    .headshot {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-top: -80px;
+      background-color: #ccc;
     }
 
     nav {
       background-color: #eee;
-      padding: 1rem;
       text-align: center;
+      padding: 1rem;
     }
 
     nav a {
@@ -65,11 +74,28 @@
       font-size: 0.9rem;
       color: #666;
     }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      .headshot {
+        width: 100px;
+        height: 100px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
+    <img src="Assets/headshot.jpg" alt="Jonathan Sarasohn Headshot" class="headshot" />
     <h1>Jonathan Sarasohn</h1>
     <p>Engineer | Builder | Problem Solver</p>
   </header>
