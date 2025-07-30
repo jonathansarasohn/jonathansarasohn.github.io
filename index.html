@@ -16,18 +16,9 @@
     header {
       background-color: #004466;
       color: white;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem 2rem;
       text-align: center;
-    }
-
-    header h1 {
-      margin: 0.5rem 0 0.2rem;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      margin: 0.2rem 0 1rem;
-      font-size: 1.2rem;
+      position: relative;
     }
 
     .headshot {
@@ -36,8 +27,26 @@
       object-fit: cover;
       border-radius: 50%;
       border: 3px solid white;
-      margin-top: -80px;
       background-color: #ccc;
+      position: absolute;
+      top: -65px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .header-content {
+      margin-top: 80px;
+    }
+
+    header h1 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    header p {
+      margin: 0.2rem 0 1rem;
+      font-size: 1.2rem;
     }
 
     nav {
@@ -88,6 +97,11 @@
       .headshot {
         width: 100px;
         height: 100px;
+        top: -50px;
+      }
+
+      .header-content {
+        margin-top: 60px;
       }
     }
   </style>
@@ -95,13 +109,15 @@
 <body>
 
   <header>
-    <img src="Assets/Index/Headshot.jpg" alt="Jonathan Sarasohn Headshot" class="headshot" />
-    <h1>Jonathan Sarasohn</h1>
-    <p>Engineer | Builder | Problem Solver</p>
+    <img src="Assets/headshot.jpg" alt="Jonathan Sarasohn Headshot" class="headshot" />
+    <div class="header-content">
+      <h1>Jonathan Sarasohn</h1>
+      <p>Engineer | Builder | Problem Solver</p>
+    </div>
   </header>
 
   <nav>
-    <a href="resume.html">Resume</a>
+    <a href="resume.html">Résumé</a>
     <a href="portfolio.html">Projects</a>
     <a href="photography.html">Photography</a>
     <a href="https://www.linkedin.com/in/jonathan-sarasohn/" target="_blank">LinkedIn</a>
@@ -111,7 +127,7 @@
     <section>
       <h2>Welcome</h2>
       <p>Hello! I’m Jonathan Sarasohn — a mechanical engineer and innovator driven by impact. I’ve worked across startups and Fortune 500s, building automation systems, developing surgical tools, and leading technical teams.</p>
-      <p>Whether I’m working at Stryker, mentoring robotics students, or photographing remote landscapes, I love applying creativity and precision to build what matters.</p>
+      <p>Whether I’m leading design at Stryker, mentoring robotics students, or photographing remote landscapes, I love applying creativity and precision to build what matters.</p>
     </section>
 
     <section>
@@ -125,7 +141,7 @@
   </main>
 
   <footer>
-    &copy; 2025 Jonathan Sarasohn · <a href="mailto:jesarasohn+web@gmail.com">Contact</a>
+    &copy; 2025 Jonathan Sarasohn · <a href="mailto:youremail@example.com">Contact</a>
   </footer>
 
 </body>
