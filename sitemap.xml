@@ -1,33 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jonathansarasohn.com/</loc>
+    <loc>https://www.jonathansarasohn.com</loc>
     <lastmod>2025-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://jonathansarasohn.com/projects.html</loc>
-    <lastmod>2025-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
    <url>
-    <loc>https://jonathansarasohn.com/resume.html</loc>
+    <loc>https://www.jonathansarasohn.com/Resume</loc>
     <lastmod>2025-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
    <url>
-    <loc>https://jonathansarasohn.com/photography.html</loc>
+    <loc>https://www.jonathansarasohn.com/Projects</loc>
     <lastmod>2025-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
    <url>
-    <loc>https://jonathansarasohn.com/news.html</loc>
+    <loc>https://www.jonathansarasohn.com/News</loc>
     <lastmod>2025-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>https://www.jonathansarasohn.com/Photography</loc>
+    <lastmod>2025-07-30</lastmod>
   </url>
 </urlset>
