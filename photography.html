@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>Photography – Jonathan Sarasohn</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
   <style>
     .photo-gallery {
       display: grid;
@@ -12,16 +16,40 @@
       margin-top: 2rem;
     }
 
+    .photo-gallery a {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
     .photo-gallery img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       transition: transform 0.2s ease;
+      display: block;
     }
 
-    .photo-gallery img:hover {
+    .photo-gallery a:hover img {
       transform: scale(1.03);
+    }
+
+    .photo-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .photo-gallery a:hover .photo-caption {
+      opacity: 1;
     }
   </style>
 </head>
@@ -30,50 +58,65 @@
   <a href="index.html">← Back to Home</a>
 
   <section class="photo-gallery">
-    <!-- Images 1–43 -->
-    <img src="assets/photography/photo-1.jpg" alt="Photo 1">
-    <img src="assets/photography/photo-2.jpg" alt="Photo 2">
-    <img src="assets/photography/photo-3.jpg" alt="Photo 3">
-    <img src="assets/photography/photo-4.jpg" alt="Photo 4">
-    <img src="assets/photography/photo-5.jpg" alt="Photo 5">
-    <img src="assets/photography/photo-6.jpg" alt="Photo 6">
-    <img src="assets/photography/photo-7.jpg" alt="Photo 7">
-    <img src="assets/photography/photo-8.jpg" alt="Photo 8">
-    <img src="assets/photography/photo-9.jpg" alt="Photo 9">
-    <img src="assets/photography/photo-10.jpg" alt="Photo 10">
-    <img src="assets/photography/photo-11.jpg" alt="Photo 11">
-    <img src="assets/photography/photo-12.jpg" alt="Photo 12">
-    <img src="assets/photography/photo-13.jpg" alt="Photo 13">
-    <img src="assets/photography/photo-14.jpg" alt="Photo 14">
-    <img src="assets/photography/photo-15.jpg" alt="Photo 15">
-    <img src="assets/photography/photo-16.jpg" alt="Photo 16">
-    <img src="assets/photography/photo-17.jpg" alt="Photo 17">
-    <img src="assets/photography/photo-18.jpg" alt="Photo 18">
-    <img src="assets/photography/photo-19.jpg" alt="Photo 19">
-    <img src="assets/photography/photo-20.jpg" alt="Photo 20">
-    <img src="assets/photography/photo-21.jpg" alt="Photo 21">
-    <img src="assets/photography/photo-22.jpg" alt="Photo 22">
-    <img src="assets/photography/photo-23.jpg" alt="Photo 23">
-    <img src="assets/photography/photo-24.jpg" alt="Photo 24">
-    <img src="assets/photography/photo-25.jpg" alt="Photo 25">
-    <img src="assets/photography/photo-26.jpg" alt="Photo 26">
-    <img src="assets/photography/photo-27.jpg" alt="Photo 27">
-    <img src="assets/photography/photo-28.jpg" alt="Photo 28">
-    <img src="assets/photography/photo-29.jpg" alt="Photo 29">
-    <img src="assets/photography/photo-30.jpg" alt="Photo 30">
-    <img src="assets/photography/photo-31.jpg" alt="Photo 31">
-    <img src="assets/photography/photo-32.jpg" alt="Photo 32">
-    <img src="assets/photography/photo-33.jpg" alt="Photo 33">
-    <img src="assets/photography/photo-34.jpg" alt="Photo 34">
-    <img src="assets/photography/photo-35.jpg" alt="Photo 35">
-    <img src="assets/photography/photo-36.jpg" alt="Photo 36">
-    <img src="assets/photography/photo-37.jpg" alt="Photo 37">
-    <img src="assets/photography/photo-38.jpg" alt="Photo 38">
-    <img src="assets/photography/photo-39.jpg" alt="Photo 39">
-    <img src="assets/photography/photo-40.jpg" alt="Photo 40">
-    <img src="assets/photography/photo-41.jpg" alt="Photo 41">
-    <img src="assets/photography/photo-42.jpg" alt="Photo 42">
-    <img src="assets/photography/photo-43.jpg" alt="Photo 43">
+    <!-- Photos 1–6 (.jpg) -->
+    <a href="Assets/Photography/photo-1.jpg" data-lightbox="gallery" data-title="Photo 1"><img src="Assets/Photography/photo-1.jpg" alt="Photo 1"><div class="photo-caption">Photo 1</div></a>
+    <a href="Assets/Photography/photo-2.jpg" data-lightbox="gallery" data-title="Photo 2"><img src="Assets/Photography/photo-2.jpg" alt="Photo 2"><div class="photo-caption">Photo 2</div></a>
+    <a href="Assets/Photography/photo-3.jpg" data-lightbox="gallery" data-title="Photo 3"><img src="Assets/Photography/photo-3.jpg" alt="Photo 3"><div class="photo-caption">Photo 3</div></a>
+    <a href="Assets/Photography/photo-4.jpg" data-lightbox="gallery" data-title="Photo 4"><img src="Assets/Photography/photo-4.jpg" alt="Photo 4"><div class="photo-caption">Photo 4</div></a>
+    <a href="Assets/Photography/photo-5.jpg" data-lightbox="gallery" data-title="Photo 5"><img src="Assets/Photography/photo-5.jpg" alt="Photo 5"><div class="photo-caption">Photo 5</div></a>
+    <a href="Assets/Photography/photo-6.jpg" data-lightbox="gallery" data-title="Photo 6"><img src="Assets/Photography/photo-6.jpg" alt="Photo 6"><div class="photo-caption">Photo 6</div></a>
+
+    <!-- Photo 7 (.JPG) -->
+    <a href="Assets/Photography/photo-7.JPG" data-lightbox="gallery" data-title="Photo 7"><img src="Assets/Photography/photo-7.JPG" alt="Photo 7"><div class="photo-caption">Photo 7</div></a>
+
+    <!-- Photos 8–29 (.jpg) -->
+    <a href="Assets/Photography/photo-8.jpg" data-lightbox="gallery" data-title="Photo 8"><img src="Assets/Photography/photo-8.jpg" alt="Photo 8"><div class="photo-caption">Photo 8</div></a>
+    <a href="Assets/Photography/photo-9.jpg" data-lightbox="gallery" data-title="Photo 9"><img src="Assets/Photography/photo-9.jpg" alt="Photo 9"><div class="photo-caption">Photo 9</div></a>
+    <a href="Assets/Photography/photo-10.jpg" data-lightbox="gallery" data-title="Photo 10"><img src="Assets/Photography/photo-10.jpg" alt="Photo 10"><div class="photo-caption">Photo 10</div></a>
+    <a href="Assets/Photography/photo-11.jpg" data-lightbox="gallery" data-title="Photo 11"><img src="Assets/Photography/photo-11.jpg" alt="Photo 11"><div class="photo-caption">Photo 11</div></a>
+    <a href="Assets/Photography/photo-12.jpg" data-lightbox="gallery" data-title="Photo 12"><img src="Assets/Photography/photo-12.jpg" alt="Photo 12"><div class="photo-caption">Photo 12</div></a>
+    <a href="Assets/Photography/photo-13.jpg" data-lightbox="gallery" data-title="Photo 13"><img src="Assets/Photography/photo-13.jpg" alt="Photo 13"><div class="photo-caption">Photo 13</div></a>
+    <a href="Assets/Photography/photo-14.jpg" data-lightbox="gallery" data-title="Photo 14"><img src="Assets/Photography/photo-14.jpg" alt="Photo 14"><div class="photo-caption">Photo 14</div></a>
+    <a href="Assets/Photography/photo-15.jpg" data-lightbox="gallery" data-title="Photo 15"><img src="Assets/Photography/photo-15.jpg" alt="Photo 15"><div class="photo-caption">Photo 15</div></a>
+    <a href="Assets/Photography/photo-16.jpg" data-lightbox="gallery" data-title="Photo 16"><img src="Assets/Photography/photo-16.jpg" alt="Photo 16"><div class="photo-caption">Photo 16</div></a>
+    <a href="Assets/Photography/photo-17.jpg" data-lightbox="gallery" data-title="Photo 17"><img src="Assets/Photography/photo-17.jpg" alt="Photo 17"><div class="photo-caption">Photo 17</div></a>
+    <a href="Assets/Photography/photo-18.jpg" data-lightbox="gallery" data-title="Photo 18"><img src="Assets/Photography/photo-18.jpg" alt="Photo 18"><div class="photo-caption">Photo 18</div></a>
+    <a href="Assets/Photography/photo-19.jpg" data-lightbox="gallery" data-title="Photo 19"><img src="Assets/Photography/photo-19.jpg" alt="Photo 19"><div class="photo-caption">Photo 19</div></a>
+    <a href="Assets/Photography/photo-20.jpg" data-lightbox="gallery" data-title="Photo 20"><img src="Assets/Photography/photo-20.jpg" alt="Photo 20"><div class="photo-caption">Photo 20</div></a>
+    <a href="Assets/Photography/photo-21.jpg" data-lightbox="gallery" data-title="Photo 21"><img src="Assets/Photography/photo-21.jpg" alt="Photo 21"><div class="photo-caption">Photo 21</div></a>
+    <a href="Assets/Photography/photo-22.jpg" data-lightbox="gallery" data-title="Photo 22"><img src="Assets/Photography/photo-22.jpg" alt="Photo 22"><div class="photo-caption">Photo 22</div></a>
+    <a href="Assets/Photography/photo-23.jpg" data-lightbox="gallery" data-title="Photo 23"><img src="Assets/Photography/photo-23.jpg" alt="Photo 23"><div class="photo-caption">Photo 23</div></a>
+    <a href="Assets/Photography/photo-24.jpg" data-lightbox="gallery" data-title="Photo 24"><img src="Assets/Photography/photo-24.jpg" alt="Photo 24"><div class="photo-caption">Photo 24</div></a>
+    <a href="Assets/Photography/photo-25.jpg" data-lightbox="gallery" data-title="Photo 25"><img src="Assets/Photography/photo-25.jpg" alt="Photo 25"><div class="photo-caption">Photo 25</div></a>
+    <a href="Assets/Photography/photo-26.jpg" data-lightbox="gallery" data-title="Photo 26"><img src="Assets/Photography/photo-26.jpg" alt="Photo 26"><div class="photo-caption">Photo 26</div></a>
+    <a href="Assets/Photography/photo-27.jpg" data-lightbox="gallery" data-title="Photo 27"><img src="Assets/Photography/photo-27.jpg" alt="Photo 27"><div class="photo-caption">Photo 27</div></a>
+    <a href="Assets/Photography/photo-28.jpg" data-lightbox="gallery" data-title="Photo 28"><img src="Assets/Photography/photo-28.jpg" alt="Photo 28"><div class="photo-caption">Photo 28</div></a>
+    <a href="Assets/Photography/photo-29.jpg" data-lightbox="gallery" data-title="Photo 29"><img src="Assets/Photography/photo-29.jpg" alt="Photo 29"><div class="photo-caption">Photo 29</div></a>
+
+    <!-- Photos 30–39 (.JPG) -->
+    <a href="Assets/Photography/photo-30.JPG" data-lightbox="gallery" data-title="Photo 30"><img src="Assets/Photography/photo-30.JPG" alt="Photo 30"><div class="photo-caption">Photo 30</div></a>
+    <a href="Assets/Photography/photo-31.JPG" data-lightbox="gallery" data-title="Photo 31"><img src="Assets/Photography/photo-31.JPG" alt="Photo 31"><div class="photo-caption">Photo 31</div></a>
+    <a href="Assets/Photography/photo-32.JPG" data-lightbox="gallery" data-title="Photo 32"><img src="Assets/Photography/photo-32.JPG" alt="Photo 32"><div class="photo-caption">Photo 32</div></a>
+    <a href="Assets/Photography/photo-33.JPG" data-lightbox="gallery" data-title="Photo 33"><img src="Assets/Photography/photo-33.JPG" alt="Photo 33"><div class="photo-caption">Photo 33</div></a>
+    <a href="Assets/Photography/photo-34.JPG" data-lightbox="gallery" data-title="Photo 34"><img src="Assets/Photography/photo-34.JPG" alt="Photo 34"><div class="photo-caption">Photo 34</div></a>
+    <a href="Assets/Photography/photo-35.JPG" data-lightbox="gallery" data-title="Photo 35"><img src="Assets/Photography/photo-35.JPG" alt="Photo 35"><div class="photo-caption">Photo 35</div></a>
+    <a href="Assets/Photography/photo-36.JPG" data-lightbox="gallery" data-title="Photo 36"><img src="Assets/Photography/photo-36.JPG" alt="Photo 36"><div class="photo-caption">Photo 36</div></a>
+    <a href="Assets/Photography/photo-37.JPG" data-lightbox="gallery" data-title="Photo 37"><img src="Assets/Photography/photo-37.JPG" alt="Photo 37"><div class="photo-caption">Photo 37</div></a>
+    <a href="Assets/Photography/photo-38.JPG" data-lightbox="gallery" data-title="Photo 38"><img src="Assets/Photography/photo-38.JPG" alt="Photo 38"><div class="photo-caption">Photo 38</div></a>
+    <a href="Assets/Photography/photo-39.JPG" data-lightbox="gallery" data-title="Photo 39"><img src="Assets/Photography/photo-39.JPG" alt="Photo 39"><div class="photo-caption">Photo 39</div></a>
+
+    <!-- Photo 40 (.jpg) -->
+    <a href="Assets/Photography/photo-40.jpg" data-lightbox="gallery" data-title="Photo 40"><img src="Assets/Photography/photo-40.jpg" alt="Photo 40"><div class="photo-caption">Photo 40</div></a>
+
+    <!-- Photos 41–42 (.JPG) -->
+    <a href="Assets/Photography/photo-41.JPG" data-lightbox="gallery" data-title="Photo 41"><img src="Assets/Photography/photo-41.JPG" alt="Photo 41"><div class="photo-caption">Photo 41</div></a>
+    <a href="Assets/Photography/photo-42.JPG" data-lightbox="gallery" data-title="Photo 42"><img src="Assets/Photography/photo-42.JPG" alt="Photo 42"><div class="photo-caption">Photo 42</div></a>
+
+    <!-- Photo 43 (.jpg) -->
+    <a href="Assets/Photography/photo-43.jpg" data-lightbox="gallery" data-title="Photo 43"><img src="Assets/Photography/photo-43.jpg" alt="Photo 43"><div class="photo-caption">Photo 43</div></a>
   </section>
+
+  <!-- Lightbox2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>
