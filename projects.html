@@ -1,29 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects – Jonathan Sarasohn</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #004466;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background-color: #eee;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #004466;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #004466;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .project-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #004466;
+    }
+  </style>
 </head>
 <body>
-  <h1>Projects</h1>
-  <a href="index.html">← Back to Home</a>
 
-  <div class="project-grid">
-    <div class="project-card">
-      <h3>Mars Rover Wheel Design</h3>
-      <p>Led development of terrain-optimized wheels for competition.</p>
-    </div>
+  <header>
+    <h1>Projects</h1>
+  </header>
 
-    <div class="project-card">
-      <h3>Weather Station Dashboard</h3>
-      <p>Built a Raspberry Pi weather display combining real-time sensors with forecast APIs.</p>
-    </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html" aria-current="page">Projects</a>
+    <a href="photography.html">Photography</a>
+    <a href="news.html">News</a>
+  </nav>
 
-    <div class="project-card">
-      <h3>COVID PPE Manufacturing</h3>
-      <p>Organized and led local team to produce and distribute face shields during the pandemic.</p>
+  <main>
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Mars Rover Wheel Design</h3>
+        <p>Led development of terrain-optimized wheels for competition.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Weather Station Dashboard</h3>
+        <p>Built a Raspberry Pi weather display combining real-time sensors with forecast APIs.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>COVID PPE Manufacturing</h3>
+        <p>Organized and led local team to produce and distribute face shields during the pandemic.</p>
+      </div>
     </div>
-  </div>
+  </main>
+
 </body>
 </html>
